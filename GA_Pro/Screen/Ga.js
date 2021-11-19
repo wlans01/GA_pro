@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Animated,
   Button,
@@ -12,27 +12,41 @@ import {
 } from "react-native";
 import data from "../dataTest";
 import Drag_Drop from "./Drag_Drop";
+import { Divider } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
 const ITEM_SIZE = 100;
 
 const Ga = ({ ismain }) => {
+  const [imguri, setimguri] = useState(
+    "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F182bf002-73c9-4b8d-b5be-ed05cf5f841f?alt=media&token=7bcc01b6-bf67-442d-a4e9-bc7d0dbbb6d5"
+  );
+  const navigation = useNavigation();
+  const changeimg = (uri) => {
+    setimguri(uri);
+  };
   return (
     <Animated.View style={{ ...styles.contianer }}>
-      <ImageBackground
-        source={require("../Image/icon.png")}
-        style={{
-          width: 300,
-          height: 150,
-          marginTop: 50,
-          overflow: "visible",
-        }}
-      />
-      <ImageBackground
+      <Pressable onPress={() => navigation.navigate("Main")}>
+        <Image
+          source={require("../Image/icon.png")}
+          style={{
+            width: 200,
+            height: 80,
+            marginTop: 50,
+
+            overflow: "visible",
+          }}
+        />
+      </Pressable>
+
+      <Image
         style={styles.mainimage}
         source={{
-          uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F182bf002-73c9-4b8d-b5be-ed05cf5f841f?alt=media&token=7bcc01b6-bf67-442d-a4e9-bc7d0dbbb6d5",
+          uri: imguri,
         }}
       />
+
       <FlatList
         scrollEventThrottle={16}
         data={data}
@@ -46,27 +60,12 @@ const Ga = ({ ismain }) => {
         }}
         ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
         showsHorizontalScrollIndicator={false}
-        renderItem={({ item, index }) => <Drag_Drop data={item} />}
+        renderItem={({ item, index }) => (
+          <Drag_Drop data={item} changeimg={changeimg} />
+        )}
         keyExtractor={(item, index) => index}
       />
     </Animated.View>
-  );
-};
-
-const CupHolder = ({ data }) => {
-  const onpress = () => {
-    console.log(data.id);
-  };
-  return (
-    <Pressable onPress={() => onpress()}>
-      <View
-        style={{
-          ...styles.cupbox,
-        }}
-      >
-        <Image style={styles.cupimg} source={{ uri: data.uri }} />
-      </View>
-    </Pressable>
   );
 };
 
@@ -77,9 +76,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#00a8ff",
   },
   mainimage: {
-    position: "relative",
+    flex: 1,
+    position: "absolute",
     width: 300,
     height: 450,
     borderRadius: 20,

@@ -52,7 +52,6 @@ export default function App() {
         screenOptions={{
           headerShown: false,
           animation: "fade",
-          presentation: "modal",
         }}
       >
         <Stack.Screen component={Main} name="Main" />

@@ -83,6 +83,9 @@ const Main = ({ ismain }) => {
           { useNativeDriver: false }
         )}
       />
+      <Text style={{ fontSize: 24, marginTop: -40, marginBottom: 20 }}>
+        꾸며볼 컵을 선택해주세요!
+      </Text>
     </Animated.View>
   );
 };
@@ -123,6 +126,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#00a8ff",
   },
   cupbox: {
     width: ITEM_SIZE,
