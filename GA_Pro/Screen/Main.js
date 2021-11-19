@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useRef, useState } from "react";
 import {
   FlatList,
@@ -14,10 +15,20 @@ import data from "../dataTest";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
 const ITEM_SIZE = 200;
 
-const Main = () => {
+const Main = ({ ismain }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
+
   return (
-    <View style={styles.contianer}>
+    <Animated.View style={{ ...styles.contianer }}>
+      <Image
+        source={require("../Image/icon.png")}
+        style={{
+          width: 300,
+          height: 150,
+          marginTop: 50,
+          overflow: "visible",
+        }}
+      />
       <Animated.FlatList
         scrollEventThrottle={16}
         data={data}
@@ -72,17 +83,16 @@ const Main = () => {
           { useNativeDriver: false }
         )}
       />
-    </View>
+    </Animated.View>
   );
 };
 
 export default Main;
 
 const Cup = ({ data, translateY, zIndex, oPa }) => {
-  const [WhoCup, setWhocup] = useState(0);
-  const onpress = (data) => {
-    setWhocup(data.id);
-    console.log(WhoCup);
+  const navigation = useNavigation();
+  const onpress = () => {
+    navigation.navigate(data.go);
   };
   return (
     <Pressable onPress={() => onpress(data)}>
