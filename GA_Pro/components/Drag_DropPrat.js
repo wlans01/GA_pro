@@ -72,14 +72,6 @@ const Drag_DropPrat = ({ data, changeimg }) => {
 export default Drag_DropPrat;
 
 const styles = StyleSheet.create({
-  iconbox: {
-    width: 100,
-    height: 100,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-    borderRadius: 50,
-  },
   iconimg: {
     width: 120,
     height: 120,
@@ -87,5 +79,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 15,
+    marginHorizontal: 5,
+    marginBottom: 50,
   },
 });

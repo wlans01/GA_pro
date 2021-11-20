@@ -14,7 +14,7 @@ import HolderW from "../HolderW";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const ITEM_SIZE = 100;
+const ITEM_SIZE = 200;
 
 const Ga = ({ route }) => {
   const { bgc, data } = route.params;
@@ -34,14 +34,14 @@ const Ga = ({ route }) => {
         }}
       >
         <Pressable onPress={() => navigation.goBack()}>
-          <Ionicons name="chevron-back-sharp" color="black" size={64} />
+          <Ionicons name="chevron-back-sharp" color="black" size={98} />
         </Pressable>
         <Pressable onPress={() => navigation.navigate("Main")}>
           <Image
             source={require("../Image/icon.png")}
             style={{
-              width: 200,
-              height: 80,
+              width: 350,
+              height: 200,
               marginTop: 50,
 
               overflow: "visible",
@@ -57,7 +57,7 @@ const Ga = ({ route }) => {
             })
           }
         >
-          <Ionicons name="chevron-forward-sharp" color="black" size={64} />
+          <Ionicons name="chevron-forward-sharp" color="black" size={98} />
         </Pressable>
       </View>
       <Image
@@ -66,7 +66,7 @@ const Ga = ({ route }) => {
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 24 }}>컵홀더정하기</Text>
+      <Text style={{ fontSize: 36, marginTop: -20 }}>컵홀더정하기</Text>
       <View style={{ flexDirection: "row", flex: 1 }}>
         {/* <View style={styles.sidebar}>
           <Text>컵선택</Text>
@@ -78,6 +78,7 @@ const Ga = ({ route }) => {
           scrollEventThrottle={16}
           data={data.Holder}
           horizontal
+          bounces={false}
           contentContainerStyle={{
             paddingHorizontal: 20,
             justifyContent: "center",
@@ -109,8 +110,8 @@ const styles = StyleSheet.create({
   mainimage: {
     flex: 1,
     position: "absolute",
-    width: 300,
-    height: 450,
+    width: 500,
+    height: 700,
     borderRadius: 20,
   },
   cupimg: {

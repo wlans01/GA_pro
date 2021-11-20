@@ -80,17 +80,9 @@ const Drag_Drop = ({ data, changeimg }) => {
 export default Drag_Drop;
 
 const styles = StyleSheet.create({
-  iconbox: {
-    width: 100,
-    height: 100,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "white",
-    borderRadius: 50,
-  },
   iconimg: {
-    width: 120,
-    height: 120,
+    width: 200,
+    height: 200,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",

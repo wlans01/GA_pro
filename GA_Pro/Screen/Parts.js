@@ -33,14 +33,14 @@ const Parts = ({ route }) => {
         }}
       >
         <Pressable onPress={() => navigation.goBack()}>
-          <Ionicons name="chevron-back-sharp" color="black" size={64} />
+          <Ionicons name="chevron-back-sharp" color="black" size={98} />
         </Pressable>
         <Pressable onPress={() => navigation.navigate("Main")}>
           <Image
             source={require("../Image/icon.png")}
             style={{
-              width: 200,
-              height: 80,
+              width: 350,
+              height: 200,
               marginTop: 50,
 
               overflow: "visible",
@@ -56,7 +56,7 @@ const Parts = ({ route }) => {
             })
           }
         >
-          <Ionicons name="chevron-forward-sharp" color="black" size={64} />
+          <Ionicons name="chevron-forward-sharp" color="black" size={98} />
         </Pressable>
       </View>
 
@@ -66,7 +66,7 @@ const Parts = ({ route }) => {
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 24 }}>파츠로 꾸며보기</Text>
+      <Text style={{ fontSize: 36, marginTop: -20 }}>파츠로 꾸며보기</Text>
       <View
         style={{
           flex: 1,
@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
   mainimage: {
     flex: 1,
     position: "absolute",
-    width: 300,
-    height: 450,
+    width: 500,
+    height: 700,
     borderRadius: 20,
   },
   cupimg: {

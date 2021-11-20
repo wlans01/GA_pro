@@ -13,7 +13,7 @@ import {
 import data from "../Cupdata";
 
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
-const ITEM_SIZE = 200;
+const ITEM_SIZE = 300;
 
 const Main = ({ ismain }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -27,8 +27,8 @@ const Main = ({ ismain }) => {
       <Image
         source={require("../Image/icon.png")}
         style={{
-          width: 300,
-          height: 150,
+          width: 500,
+          height: 250,
           marginTop: 50,
           overflow: "visible",
         }}
@@ -55,7 +55,7 @@ const Main = ({ ismain }) => {
           ];
           const translateY = scrollX.interpolate({
             inputRange,
-            outputRange: [0, -50, 0],
+            outputRange: [0, -100, 0],
           });
           const zIndex = scrollX.interpolate({
             inputRange,
@@ -68,7 +68,7 @@ const Main = ({ ismain }) => {
               ...inputRange,
               (index + 2) * ITEM_SIZE,
             ],
-            outputRange: [0, 0.8, 1, 0.8, 0],
+            outputRange: [0.4, 0.7, 1, 0.7, 0.4],
             extrapolate: "clamp",
           });
 
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   },
   cupbox: {
     width: ITEM_SIZE,
-    height: 500,
+    height: 700,
 
     justifyContent: "center",
     alignItems: "center",
