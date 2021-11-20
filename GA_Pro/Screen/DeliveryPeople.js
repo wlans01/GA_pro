@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 import data from "../dataTest";
-import Drag_Drop from "./Drag_Drop";
+import Drag_Drop from "../components/Drag_Drop";
 import { Divider } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 

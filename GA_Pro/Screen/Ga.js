@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import {
   Animated,
-  Button,
   FlatList,
   Image,
-  ImageBackground,
   Pressable,
   StyleSheet,
-  Text,
   View,
 } from "react-native";
 import data from "../dataTest";
-import Drag_Drop from "./Drag_Drop";
-import { Divider } from "react-native-elements";
+import Drag_Drop from "../components/Drag_Drop";
+
 import { useNavigation } from "@react-navigation/native";
 
 const ITEM_SIZE = 100;

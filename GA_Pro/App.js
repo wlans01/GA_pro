@@ -8,8 +8,7 @@ import {
   Text,
   View,
 } from "react-native";
-import Stacktab from "./navigation/Stacktab";
-import Drag_Drop from "./Screen/Drag_Drop";
+
 import Ga from "./Screen/Ga";
 import Main from "./Screen/Main";
 import { NavigationContainer } from "@react-navigation/native";
