@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Animated,
+  Dimensions,
   FlatList,
   Image,
   Pressable,
@@ -13,8 +14,8 @@ import Drag_Drop from "./Drag_Drop";
 import HolderW from "../HolderW";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-
-const ITEM_SIZE = 200;
+const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
+const ITEM_SIZE = SCREENWIDTH / 1.3;
 
 const Ga = ({ route }) => {
   const { bgc, data } = route.params;
@@ -40,8 +41,8 @@ const Ga = ({ route }) => {
           <Image
             source={require("../Image/icon.png")}
             style={{
-              width: 350,
-              height: 200,
+              width: SCREENWIDTH / 2,
+              height: SCREENHEIGHT / 7,
               marginTop: 50,
 
               overflow: "visible",
@@ -110,25 +111,11 @@ const styles = StyleSheet.create({
   mainimage: {
     flex: 1,
     position: "absolute",
-    width: 500,
-    height: 700,
-    borderRadius: 20,
-  },
-  cupimg: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
-    borderRadius: 20,
-  },
-  cupbox: {
     width: ITEM_SIZE,
-    height: ITEM_SIZE,
-
-    justifyContent: "center",
-    alignItems: "center",
+    height: SCREENHEIGHT / 2,
     borderRadius: 20,
-    overflow: "visible",
   },
+
   sidebar: {
     width: 100,
     backgroundColor: "red",

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import {
   Animated,
-  Button,
   FlatList,
   Image,
-  ImageBackground,
   Pressable,
   StyleSheet,
-  Text,
   View,
 } from "react-native";
 import data from "../Cupdata";

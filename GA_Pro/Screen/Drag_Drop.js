@@ -7,8 +7,10 @@ import {
   PanResponder,
   Image,
   Pressable,
+  Dimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
 const Drag_Drop = ({ data, changeimg }) => {
   //values
   const scale = useRef(new Animated.Value(1)).current;
@@ -81,11 +83,12 @@ export default Drag_Drop;
 
 const styles = StyleSheet.create({
   iconimg: {
-    width: 200,
-    height: 200,
+    width: SCREENWIDTH / 3.2,
+    height: SCREENWIDTH / 3.2,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
     borderRadius: 15,
+    elevation: 5,
   },
 });

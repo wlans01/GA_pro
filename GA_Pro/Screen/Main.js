@@ -13,7 +13,7 @@ import {
 import data from "../Cupdata";
 
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
-const ITEM_SIZE = 300;
+const ITEM_SIZE = SCREENWIDTH / 2;
 
 const Main = ({ ismain }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -27,8 +27,8 @@ const Main = ({ ismain }) => {
       <Image
         source={require("../Image/icon.png")}
         style={{
-          width: 500,
-          height: 250,
+          width: SCREENWIDTH / 2,
+          height: SCREENHEIGHT / 7,
           marginTop: 50,
           overflow: "visible",
         }}
@@ -55,7 +55,7 @@ const Main = ({ ismain }) => {
           ];
           const translateY = scrollX.interpolate({
             inputRange,
-            outputRange: [0, -100, 0],
+            outputRange: [0, -50, 0],
           });
           const zIndex = scrollX.interpolate({
             inputRange,
@@ -71,6 +71,11 @@ const Main = ({ ismain }) => {
             outputRange: [0.4, 0.7, 1, 0.7, 0.4],
             extrapolate: "clamp",
           });
+          const eve = scrollX.interpolate({
+            inputRange,
+            outputRange: [5, 10, 5],
+            extrapolate: "clamp",
+          });
 
           return (
             <Cup
@@ -79,6 +84,7 @@ const Main = ({ ismain }) => {
               zIndex={zIndex}
               oPa={oPa}
               bgc={bgc}
+              eve={eve}
             />
           );
         }}
@@ -97,7 +103,7 @@ const Main = ({ ismain }) => {
 
 export default Main;
 
-const Cup = ({ data, translateY, zIndex, oPa, bgc }) => {
+const Cup = ({ data, translateY, zIndex, oPa, bgc, eve }) => {
   const navigation = useNavigation();
   const onpress = () => {
     navigation.navigate("Ga", { bgc: bgc, data: data });
@@ -109,6 +115,7 @@ const Cup = ({ data, translateY, zIndex, oPa, bgc }) => {
           ...styles.cupbox,
           opacity: oPa,
           zIndex,
+          elevation: eve,
           transform: [{ translateY }],
         }}
       >
@@ -126,7 +133,7 @@ const styles = StyleSheet.create({
   },
   cupbox: {
     width: ITEM_SIZE,
-    height: 700,
+    height: ITEM_SIZE * 2.2,
 
     justifyContent: "center",
     alignItems: "center",
