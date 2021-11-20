@@ -66,14 +66,14 @@ const Ga = ({ route }) => {
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 24 }}>드래그 해서 컵홀더정하기</Text>
+      <Text style={{ fontSize: 24 }}>컵홀더정하기</Text>
       <View style={{ flexDirection: "row", flex: 1 }}>
-        <View style={styles.sidebar}>
+        {/* <View style={styles.sidebar}>
           <Text>컵선택</Text>
           <Text>컵홀더 선택</Text>
           <Text>파츠 꾸미기</Text>
           <Text>나만의컵 완성~</Text>
-        </View>
+        </View> */}
         <FlatList
           scrollEventThrottle={16}
           data={data.Holder}

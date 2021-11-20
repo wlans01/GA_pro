@@ -66,8 +66,16 @@ const Parts = ({ route }) => {
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 24 }}>드래그 해서 파츠 꾸며보기</Text>
-      <View style={{ flex: 1, flexDirection: "row", alignItems: "flex-end" }}>
+      <Text style={{ fontSize: 24 }}>파츠로 꾸며보기</Text>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          alignItems: "flex-end",
+          //   flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {data.parts.map((e) => (
           <Drag_DropPrat data={data.parts} key={e.id} />
         ))}
