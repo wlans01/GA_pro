@@ -13,8 +13,9 @@ import Ga from "./Screen/Ga";
 import Main from "./Screen/Main";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import DeliveryPeople from "./Screen/DeliveryPeople";
-import Woowang from "./Screen/Woowang";
+
+import Parts from "./Screen/Parts";
+import Done from "./Screen/Done";
 
 const Stack = createNativeStackNavigator();
 
@@ -45,20 +46,24 @@ export default function App() {
     useNativeDriver: true,
   });
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Main"
-        screenOptions={{
-          headerShown: false,
-          animation: "fade",
-        }}
-      >
-        <Stack.Screen component={Main} name="Main" />
-        <Stack.Screen component={Ga} name="Ga" />
-        <Stack.Screen component={DeliveryPeople} name="DeliveryPeople" />
-        <Stack.Screen component={Woowang} name="Woowang" />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="Main"
+          screenOptions={{
+            headerShown: false,
+            animation: "fade",
+          }}
+        >
+          <Stack.Screen component={Main} name="Main" />
+          <Stack.Screen component={Ga} name="Ga" />
+
+          <Stack.Screen component={Parts} name="Parts" />
+          <Stack.Screen component={Done} name="Done" />
+        </Stack.Navigator>
+      </NavigationContainer>
+      <StatusBar hidden={true} />
+    </>
   );
 }
 

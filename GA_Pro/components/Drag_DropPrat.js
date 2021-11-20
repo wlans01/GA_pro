@@ -9,7 +9,7 @@ import {
   Pressable,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-const Drag_Drop = ({ data, changeimg }) => {
+const Drag_DropPrat = ({ data, changeimg }) => {
   //values
   const scale = useRef(new Animated.Value(1)).current;
   const Position = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
@@ -52,32 +52,24 @@ const Drag_Drop = ({ data, changeimg }) => {
         Position.setValue({ x: dx, y: dy });
       },
       onPanResponderRelease: (_, { dy }) => {
-        if (dy < -250) {
-          Animated.sequence([ondrop, goHome, onHome]).start();
-
-          changeimg(data.uri);
-        } else {
-          Animated.parallel([onPressout, goHome]).start();
-        }
+        Position.flattenOffset();
       },
     })
   ).current;
   return (
-    <Pressable onPress={() => console.log(1)} style={{ zIndex: 20 }}>
-      <Animated.View
-        {...panResponder.panHandlers}
-        style={{
-          ...styles.iconimg,
-          transform: [...Position.getTranslateTransform(), { scale }],
-        }}
-      >
-        <Image style={styles.iconimg} source={{ uri: data.uri }} />
-      </Animated.View>
-    </Pressable>
+    <Animated.View
+      {...panResponder.panHandlers}
+      style={{
+        ...styles.iconimg,
+        transform: [...Position.getTranslateTransform(), { scale }],
+      }}
+    >
+      <Image style={styles.iconimg} source={{ uri: data.uriH }} />
+    </Animated.View>
   );
 };
 
-export default Drag_Drop;
+export default Drag_DropPrat;
 
 const styles = StyleSheet.create({
   iconbox: {

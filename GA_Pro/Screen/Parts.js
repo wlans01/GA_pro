@@ -8,22 +8,21 @@ import {
   Text,
   View,
 } from "react-native";
-
+import data from "../Cupdata";
 import Drag_Drop from "./Drag_Drop";
 import HolderW from "../HolderW";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import Drag_DropPrat from "../components/Drag_DropPrat";
 
 const ITEM_SIZE = 100;
 
-const Ga = ({ route }) => {
-  const { bgc, data } = route.params;
+const Parts = ({ route }) => {
+  const { uridata, bgc, data } = route.params;
 
-  const [imguri, setimguri] = useState(data.uri);
+  const [imguri, setimguri] = useState(uridata);
   const navigation = useNavigation();
-  const changeimg = (uri) => {
-    setimguri(uri);
-  };
+
   return (
     <Animated.View style={{ ...styles.contianer, backgroundColor: bgc }}>
       <View
@@ -50,7 +49,7 @@ const Ga = ({ route }) => {
         </Pressable>
         <Pressable
           onPress={() =>
-            navigation.navigate("Parts", {
+            navigation.navigate("Done", {
               uridata: imguri,
               bgc: bgc,
               data: data,
@@ -60,44 +59,24 @@ const Ga = ({ route }) => {
           <Ionicons name="chevron-forward-sharp" color="black" size={64} />
         </Pressable>
       </View>
+
       <Image
         style={styles.mainimage}
         source={{
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 24 }}>드래그 해서 컵홀더정하기</Text>
-      <View style={{ flexDirection: "row", flex: 1 }}>
-        <View style={styles.sidebar}>
-          <Text>컵선택</Text>
-          <Text>컵홀더 선택</Text>
-          <Text>파츠 꾸미기</Text>
-          <Text>나만의컵 완성~</Text>
-        </View>
-        <FlatList
-          scrollEventThrottle={16}
-          data={data.Holder}
-          horizontal
-          contentContainerStyle={{
-            paddingHorizontal: 20,
-            justifyContent: "center",
-            alignItems: "flex-end",
-            marginBottom: 30,
-            zIndex: 50,
-          }}
-          ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
-          showsHorizontalScrollIndicator={false}
-          renderItem={({ item, index }) => (
-            <Drag_Drop data={item} changeimg={changeimg} />
-          )}
-          keyExtractor={(item, index) => index}
-        />
+      <Text style={{ fontSize: 24 }}>드래그 해서 파츠 꾸며보기</Text>
+      <View style={{ flex: 1, flexDirection: "row", alignItems: "flex-end" }}>
+        {data.parts.map((e) => (
+          <Drag_DropPrat data={data.parts} key={e.id} />
+        ))}
       </View>
     </Animated.View>
   );
 };
 
-export default Ga;
+export default Parts;
 
 const styles = StyleSheet.create({
   contianer: {
@@ -127,12 +106,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 20,
     overflow: "visible",
-  },
-  sidebar: {
-    width: 100,
-    backgroundColor: "red",
-    height: 450,
-    justifyContent: "space-between",
-    alignContent: "center",
   },
 });

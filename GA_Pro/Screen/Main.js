@@ -10,16 +10,20 @@ import {
   Animated,
   Dimensions,
 } from "react-native";
-import data from "../dataTest";
+import data from "../Cupdata";
 
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
 const ITEM_SIZE = 200;
 
 const Main = ({ ismain }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
+  const bgc = scrollX.interpolate({
+    inputRange: [0, 1500],
+    outputRange: ["rgb(153,153,225)", "rgb(0,0,153)"],
+  });
 
   return (
-    <Animated.View style={{ ...styles.contianer }}>
+    <Animated.View style={{ ...styles.contianer, backgroundColor: bgc }}>
       <Image
         source={require("../Image/icon.png")}
         style={{
@@ -74,6 +78,7 @@ const Main = ({ ismain }) => {
               translateY={translateY}
               zIndex={zIndex}
               oPa={oPa}
+              bgc={bgc}
             />
           );
         }}
@@ -92,13 +97,13 @@ const Main = ({ ismain }) => {
 
 export default Main;
 
-const Cup = ({ data, translateY, zIndex, oPa }) => {
+const Cup = ({ data, translateY, zIndex, oPa, bgc }) => {
   const navigation = useNavigation();
   const onpress = () => {
-    navigation.navigate(data.go);
+    navigation.navigate("Ga", { bgc: bgc, data: data });
   };
   return (
-    <Pressable onPress={() => onpress(data)}>
+    <Pressable onPress={() => onpress()}>
       <Animated.View
         style={{
           ...styles.cupbox,
@@ -113,20 +118,11 @@ const Cup = ({ data, translateY, zIndex, oPa }) => {
   );
 };
 
-const Contens = () => {
-  return (
-    <>
-      <Image />
-    </>
-  );
-};
-
 const styles = StyleSheet.create({
   contianer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00a8ff",
   },
   cupbox: {
     width: ITEM_SIZE,
