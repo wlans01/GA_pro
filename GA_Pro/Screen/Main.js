@@ -73,7 +73,7 @@ const Main = ({ ismain }) => {
           });
           const eve = scrollX.interpolate({
             inputRange,
-            outputRange: [5, 10, 5],
+            outputRange: [0, 5, 0],
             extrapolate: "clamp",
           });
 
@@ -115,7 +115,7 @@ const Cup = ({ data, translateY, zIndex, oPa, bgc, eve }) => {
           ...styles.cupbox,
           opacity: oPa,
           zIndex,
-          elevation: eve,
+
           transform: [{ translateY }],
         }}
       >

@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    uri: "https://media3.giphy.com/media/nDSlfqf0gn5g4/200.webp?cid=ecf05e47oqu3zwope3oru7e54ea3jajyo79i60h9onyvk829&rid=200.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FGA%EA%B3%B0%20%EB%B3%B4%ED%8B%80.png?alt=media&token=c72587c3-096e-475c-8f1e-c59368550f33",
     go: "Ga",
     Holder: [
       {
@@ -60,7 +60,7 @@ export default [
   },
   {
     id: 2,
-    uri: "https://media4.giphy.com/media/ajlmbBzUqYgUM/200.webp?cid=ecf05e47oqu3zwope3oru7e54ea3jajyo79i60h9onyvk829&rid=200.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%EB%B0%B0%EB%AF%BCxGA%20%EB%B3%B4%ED%8B%80.png?alt=media&token=1a64d84a-fac6-4975-b361-608e2af109ba",
     go: "Woowang",
     Holder: [
       {
@@ -119,7 +119,7 @@ export default [
   },
   {
     id: 3,
-    uri: "https://media1.giphy.com/media/uprwwjptZW4Za/200.webp?cid=ecf05e47nbtgjmbqwsiv0a5caqdz0mollf5qpvzphdeir8l5&rid=200.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%EC%96%B4%ED%94%BC%EC%B9%98%20%EB%B3%B4%ED%8B%80_3.png?alt=media&token=16006db4-2550-4af2-9094-682cb2237e98",
     go: "DeliveryPeople",
     Holder: [
       {
@@ -178,7 +178,7 @@ export default [
   },
   {
     id: 4,
-    uri: "https://media0.giphy.com/media/GWNBoSxSpt7Ik/200w.webp?cid=ecf05e47oqu3zwope3oru7e54ea3jajyo79i60h9onyvk829&rid=200w.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%EC%9A%B0%EC%99%95%EC%9D%B4%20%EB%B3%B4%ED%8B%80_4.png?alt=media&token=10038884-fa70-4590-b6c1-70c457414750",
     go: "Woowang",
     Holder: [
       {
@@ -237,7 +237,7 @@ export default [
   },
   {
     id: 5,
-    uri: "https://media0.giphy.com/media/E2X0VRz0vd94s/200.webp?cid=ecf05e47oqu3zwope3oru7e54ea3jajyo79i60h9onyvk829&rid=200.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%B3%B4%ED%8B%80.png?alt=media&token=7d067d96-e9f6-45ab-ac53-faea14860260",
     go: "Ga",
     Holder: [
       {
@@ -296,7 +296,7 @@ export default [
   },
   {
     id: 6,
-    uri: "https://media3.giphy.com/media/SKGo6OYe24EBG/200.webp?cid=ecf05e474qpieldv4dtb9ml3jnzoe8cpx51bptggatbz9iqe&rid=200.webp&ct=g",
+    uri: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%ED%94%BC%EC%B9%B4%EC%B8%84%20%EB%B3%B4%ED%8B%80_6.png?alt=media&token=da95b62e-ce95-4f3d-9ded-9895b7badac4",
     go: "DeliveryPeople",
     Holder: [
       {
