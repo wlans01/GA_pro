@@ -13,7 +13,7 @@ import {
 import data from "../Cupdata";
 
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
-const ITEM_SIZE = SCREENWIDTH / 2;
+const ITEM_SIZE = SCREENWIDTH / 1.5;
 
 const Main = ({ ismain }) => {
   const scrollX = useRef(new Animated.Value(0)).current;
@@ -23,29 +23,31 @@ const Main = ({ ismain }) => {
   });
 
   return (
-    <Animated.View style={{ ...styles.contianer, backgroundColor: bgc }}>
+    <Animated.View style={{ ...styles.contianer }}>
       <Image
         source={require("../Image/icon.png")}
         style={{
-          width: SCREENWIDTH / 2,
+          width: SCREENWIDTH / 2.5,
           height: SCREENHEIGHT / 7,
-          marginTop: 50,
+          margin: 30,
+
           overflow: "visible",
         }}
       />
+      <Text style={{ fontSize: 36, marginTop: -40, marginBottom: 20 }}>
+        꾸며볼 컵을 선택해주세요!
+      </Text>
       <Animated.FlatList
         scrollEventThrottle={16}
         data={data}
         horizontal
         contentContainerStyle={{
-          paddingHorizontal: 50,
+          paddingHorizontal: ITEM_SIZE / 4,
           justifyContent: "center",
           alignItems: "center",
         }}
-        snapToInterval={ITEM_SIZE}
-        decelerationRate={0}
         bounces={false}
-        ItemSeparatorComponent={() => <View style={{ width: 20 }} />}
+        ItemSeparatorComponent={() => <View style={{ width: 0 }} />}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item, index }) => {
           const inputRange = [
@@ -55,7 +57,7 @@ const Main = ({ ismain }) => {
           ];
           const translateY = scrollX.interpolate({
             inputRange,
-            outputRange: [0, -50, 0],
+            outputRange: [0, -100, 0],
           });
           const zIndex = scrollX.interpolate({
             inputRange,
@@ -94,9 +96,6 @@ const Main = ({ ismain }) => {
           { useNativeDriver: false }
         )}
       />
-      <Text style={{ fontSize: 24, marginTop: -40, marginBottom: 20 }}>
-        꾸며볼 컵을 선택해주세요!
-      </Text>
     </Animated.View>
   );
 };
@@ -133,17 +132,18 @@ const styles = StyleSheet.create({
   },
   cupbox: {
     width: ITEM_SIZE,
-    height: ITEM_SIZE * 2.2,
-
+    height: ITEM_SIZE * 1.5,
+    // backgroundColor: "red",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
     overflow: "visible",
+    // marginHorizontal: -50,
   },
   cupimg: {
     width: "100%",
     height: "100%",
-    resizeMode: "cover",
+    resizeMode: "contain",
     borderRadius: 20,
   },
   secondbox: {

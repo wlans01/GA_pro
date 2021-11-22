@@ -16,7 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Drag_DropPrat from "../components/Drag_DropPrat";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
-const ITEM_SIZE = SCREENWIDTH / 1.3;
+const ITEM_SIZE = SCREENWIDTH / 1.5;
 
 const Parts = ({ route }) => {
   const { uridata, bgc, data } = route.params;
@@ -25,7 +25,7 @@ const Parts = ({ route }) => {
   const navigation = useNavigation();
 
   return (
-    <Animated.View style={{ ...styles.contianer, backgroundColor: bgc }}>
+    <Animated.View style={{ ...styles.contianer }}>
       <View
         style={{
           flexDirection: "row",
@@ -40,9 +40,9 @@ const Parts = ({ route }) => {
           <Image
             source={require("../Image/icon.png")}
             style={{
-              width: SCREENWIDTH / 2,
+              width: SCREENWIDTH / 2.5,
               height: SCREENHEIGHT / 7,
-              marginTop: 50,
+              margin: 30,
               overflow: "visible",
             }}
           />
@@ -91,13 +91,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#00a8ff",
   },
   mainimage: {
     flex: 1,
     position: "absolute",
     width: ITEM_SIZE,
-    height: SCREENHEIGHT / 2,
+    height: ITEM_SIZE * 1.5,
     borderRadius: 20,
+    resizeMode: "contain",
   },
 });

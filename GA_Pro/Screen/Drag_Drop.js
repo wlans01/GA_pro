@@ -11,6 +11,8 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
+
+const ITEM_SIZE = SCREENWIDTH / 5;
 const Drag_Drop = ({ data, changeimg }) => {
   //values
   const scale = useRef(new Animated.Value(1)).current;
@@ -83,8 +85,8 @@ export default Drag_Drop;
 
 const styles = StyleSheet.create({
   iconimg: {
-    width: SCREENWIDTH / 3.2,
-    height: SCREENWIDTH / 3.2,
+    width: ITEM_SIZE,
+    height: ITEM_SIZE,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
