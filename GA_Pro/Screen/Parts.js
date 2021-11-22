@@ -55,7 +55,7 @@ const Parts = ({ route }) => {
           </Pressable>
           <Pressable
             onPress={() =>
-              navigation.navigate("Done", {
+              navigation.navigate("Woowang", {
                 uridata: imguri,
                 bgc: bgc,
                 data: data,
@@ -72,7 +72,7 @@ const Parts = ({ route }) => {
           }}
         >
           <Text style={{ fontSize: 36, marginTop: -20 }}>
-            파츠로 꾸며주세요!
+            원하는대로 꾸며보세요
           </Text>
         </View>
       </View>

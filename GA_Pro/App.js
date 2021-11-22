@@ -16,6 +16,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Parts from "./Screen/Parts";
 import Done from "./Screen/Done";
+import Woowang from "./Screen/Woowang";
 
 const Stack = createNativeStackNavigator();
 
@@ -60,6 +61,7 @@ export default function App() {
 
           <Stack.Screen component={Parts} name="Parts" />
           <Stack.Screen component={Done} name="Done" />
+          <Stack.Screen component={Woowang} name="Woowang" />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar hidden={true} />

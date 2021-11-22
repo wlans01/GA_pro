@@ -49,7 +49,10 @@ const Drag_DropPrat = ({ data, changeimg }) => {
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: () => {
-        onPressIn.start();
+        Position.setOffset({
+          x: Position.x._value,
+          y: Position.y._value,
+        });
       },
       onPanResponderMove: (_, { dx, dy }) => {
         Position.setValue({ x: dx, y: dy });
@@ -67,7 +70,7 @@ const Drag_DropPrat = ({ data, changeimg }) => {
         transform: [...Position.getTranslateTransform(), { scale }],
       }}
     >
-      <Image style={styles.iconimg} source={{ uri: data.uriH }} />
+      <Image style={styles.iconimg} />
     </Animated.View>
   );
 };
@@ -83,6 +86,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 20,
     margin: 10,
+    backgroundColor: "red",
   },
   iconimg: {
     width: "100%",

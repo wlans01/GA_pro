@@ -29,7 +29,6 @@ const Ga = ({ route }) => {
     <Animated.View style={{ ...styles.contianer }}>
       <View
         style={{
-          flex: 1,
           width: SCREENWIDTH,
         }}
       >
@@ -73,7 +72,7 @@ const Ga = ({ route }) => {
           }}
         >
           <Text style={{ fontSize: 36, marginTop: -20 }}>
-            컵홀더를 정해주세요!
+            컵홀더를 골라주세요
           </Text>
         </View>
       </View>
