@@ -22,6 +22,7 @@ const Parts = ({ route }) => {
   const { uridata, bgc, data } = route.params;
 
   const [imguri, setimguri] = useState(uridata);
+  const [isDone, setisDone] = useState(false);
   const navigation = useNavigation();
 
   return (
@@ -94,9 +95,43 @@ const Parts = ({ route }) => {
         }}
       >
         {data.parts.map((e) => (
-          <Drag_DropPrat data={data.parts} key={e.id} />
+          <Drag_DropPrat data={e} isDone={isDone} key={e.id} />
         ))}
       </View>
+      <Pressable
+        style={{ position: "absolute", right: 50 }}
+        onPress={() => setisDone(true)}
+      >
+        <View
+          style={{
+            width: 200,
+            height: 200,
+            borderRadius: 100,
+            backgroundColor: "red",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          <Text style={{ fontSize: 64 }}>완성!</Text>
+        </View>
+      </Pressable>
+      <Pressable
+        style={{ position: "absolute", left: 50 }}
+        onPress={() => setisDone(false)}
+      >
+        <View
+          style={{
+            width: 200,
+            height: 200,
+            borderRadius: 100,
+            backgroundColor: "red",
+            justifyContent: "center",
+            alignContent: "center",
+          }}
+        >
+          <Text style={{ fontSize: 64 }}>다시하기!</Text>
+        </View>
+      </Pressable>
     </Animated.View>
   );
 };

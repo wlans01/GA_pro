@@ -1,19 +1,17 @@
 import React, { useRef, useState } from "react";
 import {
   StyleSheet,
-  Text,
-  View,
   Animated,
   PanResponder,
   Image,
-  Pressable,
   Dimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
 const ITEM_SIZE = SCREENWIDTH / 5;
-const Drag_DropPrat = ({ data, changeimg }) => {
+const Drag_DropPrat = ({ data, changeimg, isDone }) => {
   //values
+
   const scale = useRef(new Animated.Value(1)).current;
   const Position = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
 
@@ -67,10 +65,11 @@ const Drag_DropPrat = ({ data, changeimg }) => {
       {...panResponder.panHandlers}
       style={{
         ...styles.iconbox,
+        opacity: isDone ? (Position.y._value > -50 ? 0 : 1) : 1,
         transform: [...Position.getTranslateTransform(), { scale }],
       }}
     >
-      <Image style={styles.iconimg} />
+      <Image style={styles.iconimg} source={{ uri: data.uriparts }} />
     </Animated.View>
   );
 };
