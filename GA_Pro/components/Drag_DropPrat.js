@@ -80,12 +80,11 @@ const styles = StyleSheet.create({
   iconbox: {
     width: ITEM_SIZE,
     height: ITEM_SIZE,
-    backgroundColor: "white",
+
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 20,
     margin: 10,
-    backgroundColor: "red",
   },
   iconimg: {
     width: "100%",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Animated,
   Dimensions,
@@ -24,13 +24,60 @@ const Parts = ({ route }) => {
   const [imguri, setimguri] = useState(uridata);
   const [isDone, setisDone] = useState(false);
   const navigation = useNavigation();
+  const scale = useRef(new Animated.Value(0.5)).current;
+  const scale2 = useRef(new Animated.Value(10)).current;
 
+  const constant = useRef(new Animated.Value(1)).current;
+  const Done = () => {
+    setisDone(true);
+    Animated.parallel([small, big]).start(stamp.start());
+  };
+
+  const restart = () => {
+    setisDone(false);
+    constant.setValue(1);
+    scale.setValue(0.5);
+    scale2.setValue(10);
+  };
+  const big = Animated.spring(scale, {
+    toValue: 1.7,
+    useNativeDriver: true,
+  });
+
+  const small = Animated.spring(constant, {
+    toValue: 0,
+    tension: 1,
+    useNativeDriver: true,
+  });
+
+  const stamp = Animated.spring(scale2, {
+    toValue: 1.5,
+    tension: 1,
+    delay: 500,
+    useNativeDriver: true,
+  });
+
+  const scale1 = constant.interpolate({
+    inputRange: [0, 0.5, 1],
+    outputRange: [1, 1.3, 1],
+  });
+
+  const opacity = scale.interpolate({
+    inputRange: [0.5, 1.7],
+    outputRange: [0, 1],
+  });
+
+  const opacity2 = scale2.interpolate({
+    inputRange: [1, 10],
+    outputRange: [1, 0],
+  });
   return (
     <Animated.View style={{ ...styles.contianer }}>
-      <View
+      <Animated.View
         style={{
           flex: 1,
           width: SCREENWIDTH,
+          opacity: isDone ? 0 : 1,
         }}
       >
         <View
@@ -73,13 +120,13 @@ const Parts = ({ route }) => {
           }}
         >
           <Text style={{ fontSize: 36, marginTop: -20 }}>
-            원하는대로 꾸며보세요
+            {isDone ? "완성" : "컵을 꾸며보세요"}
           </Text>
         </View>
-      </View>
+      </Animated.View>
 
-      <Image
-        style={styles.mainimage}
+      <Animated.Image
+        style={{ ...styles.mainimage, transform: [{ scale: scale1 }] }}
         source={{
           uri: imguri,
         }}
@@ -100,38 +147,44 @@ const Parts = ({ route }) => {
       </View>
       <Pressable
         style={{ position: "absolute", right: 50 }}
-        onPress={() => setisDone(true)}
+        onPress={() => Done()}
       >
-        <View
-          style={{
-            width: 200,
-            height: 200,
-            borderRadius: 100,
-            backgroundColor: "red",
-            justifyContent: "center",
-            alignContent: "center",
-          }}
-        >
-          <Text style={{ fontSize: 64 }}>완성!</Text>
-        </View>
+        <Text style={{ fontSize: 52 }}>완료하기</Text>
       </Pressable>
       <Pressable
         style={{ position: "absolute", left: 50 }}
-        onPress={() => setisDone(false)}
+        onPress={() => restart()}
       >
-        <View
-          style={{
-            width: 200,
-            height: 200,
-            borderRadius: 100,
-            backgroundColor: "red",
-            justifyContent: "center",
-            alignContent: "center",
-          }}
-        >
-          <Text style={{ fontSize: 64 }}>다시하기!</Text>
-        </View>
+        <Text style={{ fontSize: 52 }}>다시하기</Text>
       </Pressable>
+      {isDone ? (
+        <Animated.Image
+          source={require("../Image/icon.png")}
+          style={{
+            width: SCREENWIDTH / 2.5,
+            height: SCREENHEIGHT / 7,
+            margin: 30,
+            position: "absolute",
+            top: 30,
+            opacity,
+            transform: [{ scale }],
+          }}
+        />
+      ) : null}
+      {isDone ? (
+        <Animated.Image
+          source={require("../Image/done.png")}
+          style={{
+            width: SCREENWIDTH / 2.5,
+            height: SCREENHEIGHT / 7,
+            margin: 30,
+            position: "absolute",
+
+            opacity: opacity2,
+            transform: [{ scale: scale2 }],
+          }}
+        />
+      ) : null}
     </Animated.View>
   );
 };

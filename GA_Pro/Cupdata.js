@@ -6,8 +6,8 @@ export default [
     Holder: [
       {
         id: 1,
-        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2Fbear%2F%EB%B3%B5%EB%A9%B4%20%ED%99%80%EB%8D%94_3.png?alt=media&token=ccf87c5a-7775-4c82-bfc8-45444db668bd",
-        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2F%ED%95%A0%EB%A1%9C%EC%9C%88%20%EB%B3%B4%ED%8B%80_7.png?alt=media&token=94180a98-baab-48a3-975a-f9e49185ad92",
+        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2Fbear%2Fcup%2F%EA%B3%B0%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=5fb04f73-4768-45fd-a66c-3fd8791855fb",
+        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2Fbear%2Fcup%2F%EA%B3%B0%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=5fb04f73-4768-45fd-a66c-3fd8791855fb",
       },
       {
         id: 2,
@@ -34,12 +34,12 @@ export default [
       {
         id: 1,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%EA%B0%80%EB%B0%9C%20%ED%99%80%EB%8D%94.png?alt=media&token=ff6886e8-31d2-4c50-893c-3c451dad4c64",
       },
       {
         id: 2,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%EC%95%9E%EB%A8%B8%EB%A6%AC%20%ED%8C%8C%EC%B8%A0_2.png?alt=media&token=7dc50310-9ebe-4f82-9dca-05fd64ade61f",
       },
       {
         id: 3,
@@ -61,7 +61,7 @@ export default [
       {
         id: 1,
         uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2F%EA%B3%BC%EC%9E%A0%20%ED%99%80%EB%8D%94_1.png?alt=media&token=43016f52-bb5f-473d-808c-4369426c2490",
-        uriC: "https://media4.giphy.com/media/jUwpNzg9IcyrK/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2Fcup%2F%EC%9A%B0%EC%99%95%EC%9D%B4%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=6079c6cc-008b-4598-94c0-205dc0076415",
       },
       {
         id: 2,
@@ -88,27 +88,22 @@ export default [
       {
         id: 1,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%EB%8B%AC%EA%B3%A0%EB%82%98%20%ED%8C%8C%EC%B8%A0.png?alt=media&token=a35ba351-266d-4c40-bb90-ae68ac7fd13b",
       },
       {
         id: 2,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%EA%B8%88%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%ED%8C%8C%EC%B8%A0.png?alt=media&token=3c58dd19-17b6-49a1-8774-aca503aed44c",
       },
       {
         id: 3,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%EC%95%9E%EB%A8%B8%EB%A6%AC%20%ED%8C%8C%EC%B8%A0_2.png?alt=media&token=7dc50310-9ebe-4f82-9dca-05fd64ade61f",
       },
       {
         id: 4,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
-      },
-      {
-        id: 5,
-        uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2F%ED%95%98%ED%8A%B8%20%ED%8C%8C%EC%B8%A0_6.png?alt=media&token=7e1976bd-f29d-43e7-b202-7193928719df",
       },
     ],
   },
@@ -119,8 +114,8 @@ export default [
     Holder: [
       {
         id: 1,
-        uriH: "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
-        uriC: "https://media4.giphy.com/media/jUwpNzg9IcyrK/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2F%ED%97%AC%EB%A9%A7%20%ED%99%80%EB%8D%94_7.png?alt=media&token=72676d4b-986b-4dc7-9ef7-bbe9ebc96d51",
+        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2Fcup%2F%EB%B0%B0%EB%AF%BC%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=c2abace4-9b78-410c-9ee3-7a148b061489",
       },
       {
         id: 2,
@@ -161,11 +156,6 @@ export default [
       },
       {
         id: 4,
-        uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
-      },
-      {
-        id: 5,
         uriparts:
           "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
       },
