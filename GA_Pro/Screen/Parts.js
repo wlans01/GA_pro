@@ -28,36 +28,53 @@ const Parts = ({ route }) => {
     <Animated.View style={{ ...styles.contianer }}>
       <View
         style={{
-          flexDirection: "row",
-          alignItems: "baseline",
-          justifyContent: "center",
+          flex: 1,
+          width: SCREENWIDTH,
         }}
       >
-        <Pressable onPress={() => navigation.goBack()}>
-          <Ionicons name="chevron-back-sharp" color="black" size={98} />
-        </Pressable>
-        <Pressable onPress={() => navigation.navigate("Main")}>
-          <Image
-            source={require("../Image/icon.png")}
-            style={{
-              width: SCREENWIDTH / 2.5,
-              height: SCREENHEIGHT / 7,
-              margin: 30,
-              overflow: "visible",
-            }}
-          />
-        </Pressable>
-        <Pressable
-          onPress={() =>
-            navigation.navigate("Done", {
-              uridata: imguri,
-              bgc: bgc,
-              data: data,
-            })
-          }
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "baseline",
+            justifyContent: "center",
+          }}
         >
-          <Ionicons name="chevron-forward-sharp" color="black" size={98} />
-        </Pressable>
+          <Pressable onPress={() => navigation.goBack()}>
+            <Ionicons name="chevron-back-sharp" color="black" size={98} />
+          </Pressable>
+          <Pressable onPress={() => navigation.navigate("Main")}>
+            <Image
+              source={require("../Image/icon.png")}
+              style={{
+                width: SCREENWIDTH / 2.5,
+                height: SCREENHEIGHT / 7,
+                margin: 30,
+                overflow: "visible",
+              }}
+            />
+          </Pressable>
+          <Pressable
+            onPress={() =>
+              navigation.navigate("Done", {
+                uridata: imguri,
+                bgc: bgc,
+                data: data,
+              })
+            }
+          >
+            <Ionicons name="chevron-forward-sharp" color="black" size={98} />
+          </Pressable>
+        </View>
+        <View
+          style={{
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ fontSize: 36, marginTop: -20 }}>
+            파츠로 꾸며주세요!
+          </Text>
+        </View>
       </View>
 
       <Image
@@ -66,14 +83,14 @@ const Parts = ({ route }) => {
           uri: imguri,
         }}
       />
-      <Text style={{ fontSize: 36, marginTop: -20 }}>파츠로 꾸며보기</Text>
+
       <View
         style={{
-          flex: 1,
           flexDirection: "row",
-          alignItems: "flex-end",
-          //   flexWrap: "wrap",
+          alignItems: "center",
+          flexWrap: "wrap",
           justifyContent: "center",
+          bottom: 0,
         }}
       >
         {data.parts.map((e) => (
@@ -99,5 +116,6 @@ const styles = StyleSheet.create({
     height: ITEM_SIZE * 1.5,
     borderRadius: 20,
     resizeMode: "contain",
+    bottom: 200,
   },
 });

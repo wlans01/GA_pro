@@ -63,7 +63,7 @@ const Drag_DropPrat = ({ data, changeimg }) => {
     <Animated.View
       {...panResponder.panHandlers}
       style={{
-        ...styles.iconimg,
+        ...styles.iconbox,
         transform: [...Position.getTranslateTransform(), { scale }],
       }}
     >
@@ -75,14 +75,19 @@ const Drag_DropPrat = ({ data, changeimg }) => {
 export default Drag_DropPrat;
 
 const styles = StyleSheet.create({
-  iconimg: {
+  iconbox: {
     width: ITEM_SIZE,
     height: ITEM_SIZE,
+    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
-    borderRadius: 15,
-    marginHorizontal: 5,
-    marginBottom: 50,
+    borderRadius: 20,
+    margin: 10,
+  },
+  iconimg: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "contain",
+    borderRadius: 20,
   },
 });

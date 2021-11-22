@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
     height: ITEM_SIZE,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
+
     borderRadius: 15,
-    elevation: 5,
+    resizeMode: "contain",
   },
 });

@@ -24,19 +24,21 @@ const Main = ({ ismain }) => {
 
   return (
     <Animated.View style={{ ...styles.contianer }}>
-      <Image
-        source={require("../Image/icon.png")}
-        style={{
-          width: SCREENWIDTH / 2.5,
-          height: SCREENHEIGHT / 7,
-          margin: 30,
+      <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <Image
+          source={require("../Image/icon.png")}
+          style={{
+            width: SCREENWIDTH / 2.5,
+            height: SCREENHEIGHT / 7,
+            margin: 30,
 
-          overflow: "visible",
-        }}
-      />
-      <Text style={{ fontSize: 36, marginTop: -40, marginBottom: 20 }}>
-        꾸며볼 컵을 선택해주세요!
-      </Text>
+            overflow: "visible",
+          }}
+        />
+        <Text style={{ fontSize: 36, marginBottom: 20, marginTop: -20 }}>
+          마음에드는 컵을 골라주세요
+        </Text>
+      </View>
       <Animated.FlatList
         scrollEventThrottle={16}
         data={data}
