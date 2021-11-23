@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
-const ITEM_SIZE = SCREENWIDTH / 5;
+const ITEM_SIZE = SCREENWIDTH / 8;
 const Drag_DropPrat = ({ data, changeimg, isDone }) => {
   //values
 

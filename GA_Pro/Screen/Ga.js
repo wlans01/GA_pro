@@ -14,6 +14,7 @@ import Drag_Drop from "./Drag_Drop";
 import HolderW from "../HolderW";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { SharedElement } from "react-navigation-shared-element";
 const { width: SCREENWIDTH, height: SCREENHEIGHT } = Dimensions.get("window");
 const ITEM_SIZE = SCREENWIDTH / 1.5;
 
@@ -76,6 +77,7 @@ const Ga = ({ route }) => {
           </Text>
         </View>
       </View>
+
       <Image
         style={styles.mainimage}
         source={{
@@ -107,7 +109,7 @@ const Ga = ({ route }) => {
           renderItem={({ item, index }) => (
             <Drag_Drop data={item} changeimg={changeimg} />
           )}
-          keyExtractor={(item, index) => index}
+          keyExtractor={(item) => item.id}
         />
       </View>
     </Animated.View>

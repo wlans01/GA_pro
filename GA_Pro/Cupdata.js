@@ -60,8 +60,8 @@ export default [
     Holder: [
       {
         id: 1,
-        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2F%EA%B3%BC%EC%9E%A0%20%ED%99%80%EB%8D%94_1.png?alt=media&token=43016f52-bb5f-473d-808c-4369426c2490",
-        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2Fcup%2F%EC%9A%B0%EC%99%95%EC%9D%B4%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=6079c6cc-008b-4598-94c0-205dc0076415",
+        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2F%EC%9A%B0%EC%99%95%EC%9D%B4%EC%A0%90%ED%8D%BC.png?alt=media&token=9c362ebc-e3cd-4383-ab48-51eefc337c6b",
+        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FWoowang%2F%EC%9A%B0%EC%99%95%EC%9D%B42.png?alt=media&token=94dfc2de-e967-4a6d-97c2-d70a109103a6",
       },
       {
         id: 2,
@@ -114,8 +114,8 @@ export default [
     Holder: [
       {
         id: 1,
-        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2F%ED%97%AC%EB%A9%A7%20%ED%99%80%EB%8D%94_7.png?alt=media&token=72676d4b-986b-4dc7-9ef7-bbe9ebc96d51",
-        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2Fcup%2F%EB%B0%B0%EB%AF%BC%20%EC%BB%B5%20%ED%99%80%EB%8D%94.JPG?alt=media&token=c2abace4-9b78-410c-9ee3-7a148b061489",
+        uriH: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2F%EB%B0%B0%EB%8B%AC%EC%9D%98%20%EB%AF%BC%EC%A1%B1.png?alt=media&token=c678a19e-9eaa-4bb4-b9ff-a6cdbb176877",
+        uriC: "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FHolder%2FBaemin%2F%EB%B0%B0%EB%8B%AC%EC%9D%98%EB%AF%BC%EC%A1%B12.png?alt=media&token=a8b28421-6108-4084-ab53-4419b35e9622",
       },
       {
         id: 2,
@@ -255,27 +255,22 @@ export default [
       {
         id: 1,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2Fsnorlax.png?alt=media&token=8b339334-3b3d-4f2b-b1f1-b4a1778998d6",
       },
       {
         id: 2,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2Fpokeball.png?alt=media&token=566caf54-fd88-406e-a1c0-4829ee6d6879",
       },
       {
         id: 3,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2Fpsyduck.png?alt=media&token=25ab0726-cf2a-4722-997f-64f05568e208",
       },
       {
         id: 4,
         uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
-      },
-      {
-        id: 5,
-        uriparts:
-          "https://media3.giphy.com/media/RwLDkna2fN3fG/200.webp?cid=ecf05e47kw5e1s26necj6jk2wp1s7gdmfsgfsyqswij3ch7e&rid=200.webp&ct=g",
+          "https://firebasestorage.googleapis.com/v0/b/good-attitude.appspot.com/o/users%2Fwlans01%40naver.com%2Fprofile_Img%2FParts%2Fsnorlax.png?alt=media&token=8b339334-3b3d-4f2b-b1f1-b4a1778998d6",
       },
     ],
   },

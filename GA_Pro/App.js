@@ -53,7 +53,8 @@ export default function App() {
           initialRouteName="Main"
           screenOptions={{
             headerShown: false,
-            animation: "fade",
+            animation: "slide_from_right",
+            presentation: "modal",
           }}
         >
           <Stack.Screen component={Main} name="Main" />

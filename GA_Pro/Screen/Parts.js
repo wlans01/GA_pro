@@ -7,6 +7,7 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native";
 import data from "../Cupdata";
@@ -101,15 +102,7 @@ const Parts = ({ route }) => {
               }}
             />
           </Pressable>
-          <Pressable
-            onPress={() =>
-              navigation.navigate("Woowang", {
-                uridata: imguri,
-                bgc: bgc,
-                data: data,
-              })
-            }
-          >
+          <Pressable onPress={() => Done()}>
             <Ionicons name="chevron-forward-sharp" color="black" size={98} />
           </Pressable>
         </View>
@@ -126,37 +119,24 @@ const Parts = ({ route }) => {
       </Animated.View>
 
       <Animated.Image
-        style={{ ...styles.mainimage, transform: [{ scale: scale1 }] }}
+        style={{ ...styles.mainimage }}
         source={{
           uri: imguri,
         }}
       />
 
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          bottom: 0,
-        }}
-      >
-        {data.parts.map((e) => (
-          <Drag_DropPrat data={e} isDone={isDone} key={e.id} />
-        ))}
-      </View>
-      <Pressable
+      {/* <Pressable
         style={{ position: "absolute", right: 50 }}
         onPress={() => Done()}
       >
         <Text style={{ fontSize: 52 }}>완료하기</Text>
-      </Pressable>
-      <Pressable
-        style={{ position: "absolute", left: 50 }}
+      </Pressable> */}
+      <TouchableOpacity
+        style={{ position: "absolute", left: 70 }}
         onPress={() => restart()}
       >
-        <Text style={{ fontSize: 52 }}>다시하기</Text>
-      </Pressable>
+        <Ionicons name="refresh-circle-outline" color="gray" size={98} />
+      </TouchableOpacity>
       {isDone ? (
         <Animated.Image
           source={require("../Image/icon.png")}
@@ -185,6 +165,19 @@ const Parts = ({ route }) => {
           }}
         />
       ) : null}
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          bottom: 0,
+        }}
+      >
+        {data.parts.map((e) => (
+          <Drag_DropPrat data={e} isDone={isDone} key={e.id} />
+        ))}
+      </View>
     </Animated.View>
   );
 };
